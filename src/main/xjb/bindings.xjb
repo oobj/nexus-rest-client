@@ -1,0 +1,23 @@
+<jxb:bindings version="1.0"
+              xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!--
+        Change since version 2.0 of the j-m-p:
+
+        Note that the schemaLocation path must point to the XSD file
+        relative to *this* file, rather than the basedir.
+    -->
+    <jxb:bindings schemaLocation="../xsd/maven/maven-metadata-v1_0_0.xsd" node="/xs:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.apache.maven"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+
+    <jxb:bindings schemaLocation="../xsd/nexus/ns0.xsd" node="/xs:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.sonatype.nexus"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+
+</jxb:bindings>
