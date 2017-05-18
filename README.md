@@ -1,24 +1,18 @@
 # nexus-rest-client
 A simple Java library to query Maven™ artifacts on Sonatype Nexus™ 2.x
 
-## I don't speak English (Eu não sei falar inglês)
-To read this same documentation page in Portuguese-BR, [please click here]().
-
-Para ler essa mesma página de documentação em Português-BR, [por favor clique aqui]().
-
-## What I am made of
+## Dependencies
 
 This library depends on:
 
 * Java 8 (compile)
-* Spring Boot v1.5.2.RELEASE
-* Spring Framework (Core, Context, Web, OXM) v4.3.7.RELEASE
-* Jersey Client v2.23.1
-* sl4j-api and slf4j-log4j12, both v1.7.24
-* junit v4.12 (test only)
-* spring-boot-starter-test vXYZ (test only)
+* Spring Boot
+* Spring Framework
+* Jersey Client
+* sl4j-api and slf4j-log4j12
+* etc
 
-For more information about dependencies, please read the `pom.xml` file and/or the [Maven documentation](https://maven.apache.org).
+For more information about dependencies, please see the [Dependencies and Limitations](https://github.com/oobj/nexus-rest-client/wiki/Dependencies-And-Limitations) Wiki page.
 
 ## Setting your Nexus credentials
 
