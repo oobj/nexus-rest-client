@@ -1,7 +1,7 @@
 package br.com.oobj.nexus.model.maven;
 
 /**
- * Representa um conjunto de {@code groupId}, {@code artifactId} e {@code version}
+ * Represents the following set: a {@code groupId}, an {@code artifactId} and a {@code version}.
  *
  * @author <a href="mailto:guimaraes.djl@gmail.com">Danilo Guimar&atilde;es</a>
  * @since 08/03/2017

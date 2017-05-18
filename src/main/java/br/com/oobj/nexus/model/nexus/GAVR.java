@@ -11,11 +11,12 @@ import br.com.oobj.nexus.model.maven.GAV;
 public class GAVR extends GAV {
 
     /**
+     * Default constructor.
      *
-     * @param groupId o groupId do artefato (obrigatório)
-     * @param artifactId o artifactId do artefato (obrigatório)
-     * @param version a version do artefato (obrigatório)
-     * @param repository o repository que o artefato se encontra (obrigatório)
+     * @param groupId the artifact groupId (mandatory)
+     * @param artifactId the artifactId (mandatory)
+     * @param version the artifcat version (mandatory)
+     * @param repository the artifact repository (mandatory)
      */
     public GAVR(String groupId, String artifactId, String version, String repository) {
         setGroupdId(groupId);

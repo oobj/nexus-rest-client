@@ -8,6 +8,7 @@ import br.com.oobj.nexus.model.maven.Packaging;
  * @author <a href="mailto:guimaraes.djl@gmail.com">Danilo Guimar&atilde;es</a>
  * @since 08/03/2017
  * @see <a href="https://maven.apache.org/pom.html#Maven_Coordinates">Maven Coordinates</a>
+ * @see Packaging
  */
 public enum CorePackaging implements Packaging {
     POM("pom"),

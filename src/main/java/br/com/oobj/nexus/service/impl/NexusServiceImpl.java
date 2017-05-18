@@ -144,8 +144,8 @@ public class NexusServiceImpl implements NexusService {
     @Override
     public MavenMetadata queryMavenArtifactMetaData(String groupId, String artifactId)
             throws AuthenticationException, ArtifactNotFoundException {
-        Assert.hasLength(groupId, i18nMessageBuilder.getMessage(GROUP_ID_MUST_NOT_BE_NULL_OR_EMPTY));
-        Assert.hasLength(artifactId, i18nMessageBuilder.getMessage(ARTIFACT_ID_MUST_NOT_BE_NULL_OR_EMPTY));
+        Assert.hasText(groupId, i18nMessageBuilder.getMessage(GROUP_ID_MUST_NOT_BE_NULL_OR_EMPTY));
+        Assert.hasText(artifactId, i18nMessageBuilder.getMessage(ARTIFACT_ID_MUST_NOT_BE_NULL_OR_EMPTY));
 
         String groupIdParsed = groupId.replaceAll("\\.", "/");
 

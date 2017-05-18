@@ -12,7 +12,7 @@ import javax.ws.rs.core.Response;
 import java.util.concurrent.Future;
 
 /**
- * Consume some Nexus services.
+ * Provide some services that consumes artifacts on Sonatype Nexus.
  *
  * @author <a href="mailto:guimaraes.djl@gmail.com">Danilo Guimar&atilde;es</a>
  * @since 08/03/2017
@@ -37,6 +37,10 @@ public interface NexusService {
 
     /**
      * Retrieves the content of the requested artifact in a asynchronous way.
+     *
+     * <p>
+     *  Recommended for large artifacts.
+     * </p>
      *
      * @param parameters  the artifact parameters that will be retrieved
      * @return the content of the requested artifact.

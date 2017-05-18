@@ -69,7 +69,7 @@ public class ArtifactMavenResolveParametersBuilder {
 
     /**
      *
-     * @param packaging
+     * @param packaging Packaging type of the artifact (Optional).
      * @return the builder itself
      */
     public ArtifactMavenResolveParametersBuilder packaging(Packaging packaging) {
@@ -79,7 +79,7 @@ public class ArtifactMavenResolveParametersBuilder {
 
     /**
      *
-     * @param classifier
+     * @param classifier Classifier of the artifact (Optional).
      * @return the builder itself
      */
     public ArtifactMavenResolveParametersBuilder classifier(Classifier classifier) {
@@ -89,7 +89,7 @@ public class ArtifactMavenResolveParametersBuilder {
 
     /**
      *
-     * @param extension
+     * @param extension Extension type of the artifact (Optional).
      * @return the builder itself
      */
     public ArtifactMavenResolveParametersBuilder extension(Extension extension) {
@@ -100,6 +100,10 @@ public class ArtifactMavenResolveParametersBuilder {
     /**
      * Build the {@link ArtifactMavenResolveParameters}.
      *
+     * <p>
+     *  May throw an {@link IllegalArgumentException} if the mandatory arguments have not been set properly.
+     * </p>
+     *
      * @return the {@link ArtifactMavenResolveParameters} built.
      */
     public ArtifactMavenResolveParameters build() {
@@ -108,7 +112,8 @@ public class ArtifactMavenResolveParametersBuilder {
         Assert.hasText(version, i18nMessageBuilder.getMessage(I18nMessages.VERSION_MUST_NOT_BE_NULL_OR_EMPTY));
         Assert.hasText(repository, i18nMessageBuilder.getMessage(I18nMessages.REPOSITORY_MUST_NOT_BE_NULL_OR_EMPTY));
 
-        ArtifactMavenResolveParameters parameters = new ArtifactMavenResolveParameters(groupId, artifactId, version, repository);
+        ArtifactMavenResolveParameters parameters =
+                new ArtifactMavenResolveParameters(groupId, artifactId, version, repository);
         parameters.setPackaging(packaging);
         parameters.setClassifier(classifier);
         parameters.setExtension(extension);

@@ -4,27 +4,40 @@ import br.com.oobj.nexus.model.maven.Classifier;
 import br.com.oobj.nexus.model.maven.Packaging;
 
 /**
- * Example of the most basic usage:
+ * This is an "extension" of {@link GAVR}.
+ * It's the information used to query at the Nexus Core Rest API - Artifact Maven Resolve Endpoint
+ *
+ * <p>
+ * To create an instance of this class, you must use the Builder:
+ * </p>
  *
  * <pre>
  *  ArtifactMavenResolveParameters amrp =
- *          new ArtifactMavenResolveParameters("com.my.company", "my-project", "1.0.0", "release");
+ *          new ArtifactMavenResolveParametersBuilder("com.mycompany", "my-project", "1.0.0", "release")
+ *          .build();
  * </pre>
  *
- * You also can use a Builder to set packaging, classifier and/or extension information:
+ * <p>
+ * You can also set packaging, classifier and/or extension information during the building process:
+ * </p>
  *
  * <pre>
  *  ArtifactMavenResolveParameters amrp =
- *          new ArtifactMavenResolveParametersBuilder("com.my.company", "my-project","1.0.0", "release")
+ *          new ArtifactMavenResolveParametersBuilder("com.mycompany", "my-project", "1.0.0", "release")
  *           .packaging(myPackaging)
  *           .classifier(classifier)
  *           .extension(extension)
  *           .build();
  * </pre>
  *
+ * <p>
+ * The {@link ArtifactMavenResolveParametersBuilder#build build()} method invocation can produce an
+ * {@link IllegalArgumentException} (see Javadoc for more details).
+ * </p>
+ *
  * @author <a href="mailto:guimaraes.djl@gmail.com">Danilo Guimar&atilde;es</a>
  * @since 09/03/2017
- * @see <a href="http://maven.oobj.com.br/nexus/nexus-restlet1x-plugin/default/docs/path__artifact_maven_resolve.html">Nexus Core Rest API - Artifact Maven Resolve Endpoint</a>
+ * @see <a href="https://repository.sonatype.org/nexus-restlet1x-plugin/default/docs/path__artifact_maven_resolve.html">Nexus Core Rest API - Artifact Maven Resolve Endpoint</a>
  * @see ArtifactMavenResolveParametersBuilder
  */
 public class ArtifactMavenResolveParameters {
@@ -34,14 +47,14 @@ public class ArtifactMavenResolveParameters {
     private Classifier classifier;
     private Extension extension;
 
-    private ArtifactMavenResolveParameters() {
-        super();
-    }
-
     /**
      * Default package-protected constructor.
      *
-     * @param groupId the artifact groupId(mandatory)
+     * <p>
+     * All arguments are required.
+     * </p>
+     *
+     * @param groupId the artifact groupId (mandatory)
      * @param artifactId the artifactId (mandatory)
      * @param version the artifcat version (mandatory)
      * @param repository the artifact repository (mandatory)
