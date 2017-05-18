@@ -14,24 +14,6 @@ This library depends on:
 
 For more information about dependencies, please see the [Dependencies and Limitations](https://github.com/oobj/nexus-rest-client/wiki/Dependencies-And-Limitations) Wiki page.
 
-## Setting your Nexus credentials
-
-First of all, you must have to set some informations about your Nexus instalation, like URL address, login and password.
-
-
-To configure these information, you must have to define the following properties during your Maven build:
-
-* `nexus.url`
-* `nexus.username`
-* `nexus.password`
-
-Theses keys will be replaced in the `nexus.properties` file.
-To assure a high level of security, this user credentials can be read-only.
-
-A fashioned way to describe this properties is via Maven profiles.
-
-For more information about Maven properties during the build, please read the [Maven documentation](http://maven.apache.org/guides/introduction/introduction-to-profiles.html).
-
 ## Importing
 
 To import the library to your project using Maven, you must add the following snippet to your `pom.xml`:
@@ -76,4 +58,8 @@ So, you have these options:
 Each option above is explained in the [Features](https://github.com/oobj/nexus-rest-client/wiki/Features) Wiki page.
 
 
- 
+## Please, don't sue us!
+
+Sonatype, Nexus and Sonatype Nexus are trademarks of [Sonatype, Inc.](http://www.sonatype.org/)
+
+Apache Maven and Maven are trademarks of the [Apache Software Foundation.](http://www.apache.org/) 
