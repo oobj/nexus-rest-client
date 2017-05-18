@@ -53,12 +53,13 @@ The main interface on this library is the `NexusService` interface.
 To use the service, you probally have to inject this in your code, like this:
 
 ```java
-public MyClass {
+@Component
+public MySpringComponent {
     
     private final NexusService nexusService;
 
     @Inject
-    public MyClass(NexusService nexusService) {
+    public MySpringComponent(NexusService nexusService) {
         this.nexusService = nexusService;
     }
 }
@@ -72,36 +73,7 @@ So, you have these options:
 * `nexusService.queryMavenArtifactMetaData`
 * `nexusService.queryMavenArtifactDetails`
 
-Let's explain everyone in the following sections...
+Each option above is explained in the [Features](https://github.com/oobj/nexus-rest-client/wiki/Features) Wiki page.
 
-### Get Maven Artifcat Content
-This method will download a Maven artifact.
-
-### Get Maven Artifcat Content Asynchronously
-This method will download a Maven artifact in a asynchronous request.
-
-After invoke this method, you will receive a `Future<javax.ws.rs.core.Response>`
-
-Recomended for large artifact files.
-
-### Query Maven Artifact 'POM Model'
-
-Return a POM Model
-
-**CAUTION**: Actually, it isn't the real POM Model, [as explained here](https://repository.sonatype.org/nexus-restlet1x-plugin/default/docs/path__artifact_maven.html).
-
-### Query Maven artifact Metadata
-
-Return the `maven-metadata.xml` file, marshalled in a `MavenMetadata` object.
-
-### Query Maven Artifact Details
-
-Return the artifact details, marshalled in an `ArtifactResolveResource` object.
-
-## Please, don't sue us!
-
-Sonatype, Nexus and Sonatype Nexus are trademarks of [Sonatype, Inc.](http://www.sonatype.org/)
-
-Apache Maven and Maven are trademarks of the [Apache Software Foundation.](http://www.apache.org/)
 
  
